@@ -17,6 +17,11 @@ Ein Gutenberg-Block zur einfachen Verwaltung von **Start- und Endzeitpunkten** i
 * Optional sortierbar in der Admin-Übersicht
 * Eingabeformular mit Fokus auf Klarheit und UX
 
+## HTML-Ausgabe
+```
+<div class="wp-block-ud-datetime-block" data-start="2025-05-22T00:00:00" data-end="2025-05-23T00:00:00"><div class="datetime">22. – 23. Mai 2025</div></div>
+```
+
 ---
 
 ## Beispiel-Ausgaben
@@ -72,25 +77,29 @@ ud-datetime-block/
 ├── build/                    → Ausgabeordner für kompiliertes CSS/JS
 </pre>
 
----
 
-## Installation
+## HTML-Ausgabe im Frontend
 
-1. Plugin in den Ordner `wp-content/plugins/` legen
-2. Per Backend aktivieren
-3. Im Gutenberg-Editor den Block **„Datum-Zeit Block“** einfügen
+Der Block gibt folgenden HTML-Code aus:
 
----
+```html
+<div class="wp-block-ud-datetime-block" data-start="2025-05-22T00:00:00" data-end="2025-05-23T00:00:00">
+  <div class="datetime">22. – 23. Mai 2025</div>
+</div>
+```
+
+
+### Erläuterung:
+
+* **`data-start` / `data-end`**
+  → enthalten die vollständigen ISO-Zeitstempel (z. B. `2025-05-22T00:00:00`) und lassen sich für Sortierung, Filter oder JavaScript-Zwecke nutzen.
+
 
 ## Hinweise
 
 * Der Block speichert **zusätzlich** `start` und `end` als Meta-Felder → ideal für Abfragen oder Templates
 * Kompatibel mit jedem Custom Post Type (solange `public` = `true`)
 * Block ist vollständig valider `block.json`-basiert (API Version 2)
-
-
-Hier ist ein optionaler Abschnitt, den du ans Ende deiner `README.md` einfügen kannst, falls du einen **WP\_Query nach Startdatum** integrieren möchtest:
-
 
 
 ## Beispiel: Beiträge nach Startdatum sortieren
@@ -121,3 +130,9 @@ $query = new WP_Query($args);
 
 > Ergebnis: Alle Inhalte mit einem zukünftigen Startdatum – sortiert nach dem frühesten Datum.
 
+
+## Installation
+
+1. Plugin in den Ordner `wp-content/plugins/` legen
+2. Per Backend aktivieren
+3. Im Gutenberg-Editor den Block **„Datum-Zeit Block“** einfügen
