@@ -74,7 +74,7 @@ ud-datetime-block/
 
 ---
 
-## 🔧 Installation
+## Installation
 
 1. Plugin in den Ordner `wp-content/plugins/` legen
 2. Per Backend aktivieren
@@ -82,7 +82,7 @@ ud-datetime-block/
 
 ---
 
-## ℹHinweise
+## Hinweise
 
 * Der Block speichert **zusätzlich** `start` und `end` als Meta-Felder → ideal für Abfragen oder Templates
 * Kompatibel mit jedem Custom Post Type (solange `public` = `true`)
