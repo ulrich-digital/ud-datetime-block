@@ -1,0 +1,47 @@
+{
+  "apiVersion": 2,
+  "name": "ud/datetime-block",
+  "title": "Datum-Zeit Block",
+  "category": "widgets",
+  "icon": "calendar",
+  "description": "Block mit Start-/Endzeit und optionalem Anzeige-Label.",
+  "editorScript": "file:./build/editor-script.js",
+  "style": "file:./build/frontend-style.css",
+  "editorStyle": "file:./build/editor-style.css",
+  "attributes": {
+    "startDate": {
+      "type": "string"
+    },
+    "startTime": {
+      "type": "string"
+    },
+    "endDate": {
+      "type": "string"
+    },
+    "endTime": {
+      "type": "string"
+    },
+    "customLabel": {
+      "type": "string"
+    },
+    "showOptions": {
+      "type": "boolean",
+      "default": false
+    },
+    "start": {
+      "type": "string",
+      "source": "attribute",
+      "attribute": "data-start",
+      "selector": ".wp-block-ud-datetime-block"
+    },
+    "end": {
+      "type": "string",
+      "source": "attribute",
+      "attribute": "data-end",
+      "selector": ".wp-block-ud-datetime-block"
+    }
+  },
+  "supports": {
+    "html": false
+  }
+}
