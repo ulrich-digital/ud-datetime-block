@@ -22,7 +22,6 @@ Ein Gutenberg-Block zur einfachen Verwaltung von **Start- und Endzeitpunkten** i
 <div class="wp-block-ud-datetime-block" data-start="2025-05-22T00:00:00" data-end="2025-05-23T00:00:00"><div class="datetime">22. – 23. Mai 2025</div></div>
 ```
 
----
 
 ## Beispiel-Ausgaben
 
@@ -34,7 +33,6 @@ Ein Gutenberg-Block zur einfachen Verwaltung von **Start- und Endzeitpunkten** i
 | Start + Endzeit    | `10. Mai 2025 • 9 – 11 Uhr` |
 | Individueller Text | `Freitagmorgen`             |
 
----
 
 ## Screenshots
 
@@ -42,8 +40,6 @@ Ein Gutenberg-Block zur einfachen Verwaltung von **Start- und Endzeitpunkten** i
 
 ![Editor UI](./assets/img/editor.png)
 
-
----
 
 ## Verzeichnisstruktur
 
