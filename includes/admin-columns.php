@@ -1,6 +1,6 @@
 <?php
 defined('ABSPATH') || exit;
-
+/*
 add_action('admin_init', function () {
 	$post_types = get_post_types(['public' => true], 'names');
 
@@ -50,3 +50,4 @@ add_action('admin_init', function () {
 		});
 	}
 });
+*/

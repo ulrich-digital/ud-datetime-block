@@ -22,3 +22,32 @@ add_action('init', function () {
 		]);
 	}
 });
+
+/*
+add_action('init', function () {
+    if (!current_user_can('manage_options')) {
+        return; // Nur Admins
+    }
+
+    $debug_post_id = 800; // <<<<< DEINE POST-ID HIER EINTRAGEN
+
+    if (!defined('WP_DEBUG') || !WP_DEBUG_LOG) {
+        error_log('Bitte WP_DEBUG und WP_DEBUG_LOG in wp-config.php aktivieren.');
+        return;
+    }
+
+    $meta = get_post_meta($debug_post_id);
+
+    if (empty($meta)) {
+        error_log("🔍 Post {$debug_post_id} hat keine Metafelder.");
+        return;
+    }
+
+    error_log("🔍 Metafelder für Post {$debug_post_id}:");
+    foreach ($meta as $key => $value) {
+        // Wenn mehrere Werte, schön formatieren
+        $formatted = is_array($value) ? json_encode($value) : $value;
+        error_log("  {$key}: {$formatted}");
+    }
+});
+*/
