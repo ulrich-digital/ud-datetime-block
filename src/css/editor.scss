@@ -1,52 +1,48 @@
-.wp-block-ud-datetime-block{
-background-color: white;
-border: 1px solid #949494;
-padding: 15px;
-border-radius: 12px;
-flex-grow: 1;
-}
+.wp-block-ud-datetime-block {
+	background-color: var(--wp--preset--color--ui-neutral-100);
+	padding: 15px;
+	border-radius: 12px;
+	flex-grow: 1;
 
-.wp-block-ud-datetime-block .datetime-main-row,
-.wp-block-ud-datetime-block .datetime-options {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 1rem;
-    align-items: center;
-}
+	.datetime-main-row,
+	.datetime-options {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+		gap: 1rem;
+		align-items: center;
+	}
 
-.wp-block-ud-datetime-block .datetime-preview {
-  font-weight: bold;
-  white-space: nowrap;
+	.datetime-preview {
+		font-weight: bold;
+		white-space: nowrap;
+	}
 
-}
+	.datetime-options {
+		margin-top: 1rem;
+		padding-top: 1rem;
+	}
 
-.wp-block-ud-datetime-block .datetime-options {
-  margin-top: 1rem;
-  padding-top: 1rem;
-}
+	.datetime-inline {
+		display: flex;
+		flex-wrap: nowrap;
+		gap: 1rem;
+		align-items: flex-end;
+		overflow-x: auto;
 
+		.components-base-control {
+			min-width: 160px;
+			flex: 1 1 auto;
+		}
+	}
 
-.wp-block-ud-datetime-block .datetime-inline {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 1rem;
-  align-items: flex-end;
-  overflow-x: auto;
-}
-
-.wp-block-ud-datetime-block .datetime-inline .components-base-control {
-  min-width: 160px;
-  flex: 1 1 auto;
-}
-
-
-.wp-block-ud-datetime-block .pflichtfeld{
-    font-size: 14px;
-    font-weight: 500;
-    background: #169a261c;
-    display: inline-block;
-    border-radius: 21px;
-    padding: 2px 7px;
-    border: 1px solid #169a26;
-    color: #169a26;
+	.pflichtfeld {
+		font-size: 14px;
+		font-weight: 500;
+		background: #169a261c;
+		display: inline-block;
+		border-radius: 21px;
+		padding: 2px 7px;
+		border: 1px solid #169a26;
+		color: #169a26;
+	}
 }

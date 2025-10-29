@@ -1,14 +1,15 @@
 <?php
 /**
- * Plugin Name:       DateTime Block
- * Description:       Block zur Eingabe von Start-/Enddatum und optionalem Anzeigetext.
- * Version:           1.1
- * Author: ulrich.digital gmbh
- * Author URI: https://ulrich.digital/
- * License: GPL v2 or later
- * License URI: https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain: ud-datetime-block
+ * Plugin Name:     UD Block: Datum & Uhrzeit
+ * Description:     Block zur Eingabe von Start- und Enddatum mit optionalem Anzeigetext.
+ * Version:         1.1.0
+ * Author:          ulrich.digital gmbh
+ * Author URI:      https://ulrich.digital/
+ * License:         GPL v2 or later
+ * License URI:     https://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain:     datetime-block-ud
  */
+
 
 
 defined('ABSPATH') || exit;

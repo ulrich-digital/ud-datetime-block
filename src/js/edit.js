@@ -26,6 +26,7 @@ export default function Edit({ attributes, setAttributes }) {
 				<TextControl
 					label={__('Startdatum', 'ud-datetime-block')}
 					help={__('Pflichtfeld', 'ud-datetime-block')}
+					className='startdatum'
 					type="date"
 					value={startDate}
 					onChange={(value) => {
@@ -39,6 +40,7 @@ export default function Edit({ attributes, setAttributes }) {
 				<TextControl
 					label={__('Startzeit', 'ud-datetime-block')}
 					help={__('Optional', 'ud-datetime-block')}
+					className='startzeit'
 					type="time"
 					value={startTime}
 					onChange={(value) => {
@@ -52,6 +54,7 @@ export default function Edit({ attributes, setAttributes }) {
 				<BaseControl
 					label={__('Vorschau', 'ud-datetime-block')}
 					help={__('Ausgabe im Frontend', 'ud-datetime-block')}
+					className='preview'
 					__nextHasNoMarginBottom={true}
 				>
 					<div className="datetime-preview">
@@ -74,6 +77,8 @@ export default function Edit({ attributes, setAttributes }) {
 					<TextControl
 						label={__('Enddatum', 'ud-datetime-block')}
 						help={__('Optional', 'ud-datetime-block')}
+						className='enddatum'
+
 						type="date"
 						value={endDate}
 						onChange={(value) => {
@@ -86,6 +91,7 @@ export default function Edit({ attributes, setAttributes }) {
 					<TextControl
 						label={__('Endzeit', 'ud-datetime-block')}
 						help={__('Optional', 'ud-datetime-block')}
+						className='endzeit'
 						type="time"
 						value={endTime}
 						onChange={(value) => {
@@ -98,6 +104,7 @@ export default function Edit({ attributes, setAttributes }) {
 					<TextControl
 						label={__('Anzeigetext (optional)', 'ud-datetime-block')}
 						help={__('Überschreibt die Anzeige', 'ud-datetime-block')}
+						className='anzeigetext'
 						value={customLabel}
 						onChange={(value) => setAttributes({ customLabel: value })}
 						__nextHasNoMarginBottom={true}

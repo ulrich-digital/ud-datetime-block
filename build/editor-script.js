@@ -61,6 +61,7 @@ function Edit({
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
         label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Startdatum', 'ud-datetime-block'),
         help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Pflichtfeld', 'ud-datetime-block'),
+        className: "startdatum",
         type: "date",
         value: startDate,
         onChange: value => {
@@ -75,6 +76,7 @@ function Edit({
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
         label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Startzeit', 'ud-datetime-block'),
         help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Optional', 'ud-datetime-block'),
+        className: "startzeit",
         type: "time",
         value: startTime,
         onChange: value => {
@@ -89,6 +91,7 @@ function Edit({
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.BaseControl, {
         label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Vorschau', 'ud-datetime-block'),
         help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Ausgabe im Frontend', 'ud-datetime-block'),
+        className: "preview",
         __nextHasNoMarginBottom: true,
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
           className: "datetime-preview",
@@ -109,6 +112,7 @@ function Edit({
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
         label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Enddatum', 'ud-datetime-block'),
         help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Optional', 'ud-datetime-block'),
+        className: "enddatum",
         type: "date",
         value: endDate,
         onChange: value => {
@@ -123,6 +127,7 @@ function Edit({
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
         label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Endzeit', 'ud-datetime-block'),
         help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Optional', 'ud-datetime-block'),
+        className: "endzeit",
         type: "time",
         value: endTime,
         onChange: value => {
@@ -137,6 +142,7 @@ function Edit({
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
         label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Anzeigetext (optional)', 'ud-datetime-block'),
         help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Überschreibt die Anzeige', 'ud-datetime-block'),
+        className: "anzeigetext",
         value: customLabel,
         onChange: value => setAttributes({
           customLabel: value
