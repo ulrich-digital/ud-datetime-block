@@ -36,7 +36,7 @@ Ein Gutenberg-Block zur einfachen Verwaltung von **Start- und Endzeitpunkten** i
 
 ## Screenshots
 
-![Frontend](./assets/img/ud-datetime-block_02.png)
+![Frontend](./assets/img/ud-datetime-block_02.jpg)
 *Abbildung: Frontend-Ansicht.*
 
 ![Editor UI](./assets/img/editor.png)
