@@ -42,6 +42,7 @@ Ein Gutenberg-Block zur einfachen Verwaltung von **Start- und Endzeitpunkten** i
 ![Editor UI](./assets/img/editor.png)
 *Abbildung: Editor-Ansicht.*
 
+
 ## Verzeichnisstruktur
 
 <pre>
