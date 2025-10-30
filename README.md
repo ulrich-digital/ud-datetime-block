@@ -36,10 +36,11 @@ Ein Gutenberg-Block zur einfachen Verwaltung von **Start- und Endzeitpunkten** i
 
 ## Screenshots
 
-**Gutenberg Editor**
+![Frontend](./assets/img/ud-datetime-block_02.png)
+*Abbildung: Frontend-Ansicht.*
 
 ![Editor UI](./assets/img/editor.png)
-
+*Abbildung: Editor-Ansicht.*
 
 ## Verzeichnisstruktur
 
