@@ -34,13 +34,15 @@ Speichert alle Werte als Meta-Felder und bettet Start-/Enddaten zusätzlich als 
 
 - Beispielhafte Eingaben und resultierende Ausgaben:
 
-    | Eingabe            | Ausgabe                     |
-    | ------------------ | --------------------------- |
-    | Nur Startdatum     | `10. Mai 2025`              |
-    | Start + Startzeit  | `10. Mai 2025 • 9 Uhr`      |
-    | Start/Enddatum     | `10. – 12. Mai 2025`        |
-    | Start + Endzeit    | `10. Mai 2025 • 9 – 11 Uhr` |
-    | Individueller Text | `Freitagmorgen`             |
+    | Eingabe                     | Ausgabe                      |
+    |-----------------------------|------------------------------|
+    | Startdatum                  | `10. Mai 2025`               |
+    | Start + Startzeit           | `10. Mai 2025 • 9 Uhr`       |
+    | Start/Enddatum im selben Monat | `10. – 12. Mai 2025`       |
+    | Start/Enddatum in verschiedenen Monaten | `10. März – 12. Mai 2025` |
+    | Start/Enddatum in verschiedenen Jahren  | `10. März 2024 – 12. Mai 2025` |
+    | Start + Endzeit             | `10. Mai 2025 • 9 – 12 Uhr`  |
+    | Individueller Text          | `Freitagmorgen`              |
 
 
 
