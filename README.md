@@ -1,7 +1,8 @@
-# 📅 DateTime Block
+# UD Block: DateTime 
 
 Ein Gutenberg-Block zur einfachen Verwaltung von **Start- und Endzeitpunkten** in Beiträgen, Seiten und Custom Post Types. Ideal für Veranstaltungen, Zeiträume oder geplante Inhalte.
 
+Speichert alle Werte als Meta-Felder und bettet Start-/Enddaten zusätzlich als data-start und data-end im HTML aus, wodurch sich die Daten leicht filtern oder sortieren lassen.
 
 ## Funktionen
 
@@ -15,15 +16,21 @@ Ein Gutenberg-Block zur einfachen Verwaltung von **Start- und Endzeitpunkten** i
   * `ud_datetime_block_end`
 * Inklusive Vorschau direkt im Editor
 * Optional sortierbar in der Admin-Übersicht
-* Eingabeformular mit Fokus auf Klarheit und UX
-
-## HTML-Ausgabe
-```
-<div class="wp-block-ud-datetime-block" data-start="2025-05-22T00:00:00" data-end="2025-05-23T00:00:00"><div class="datetime">22. – 23. Mai 2025</div></div>
-```
+* Klare, UX-optimierte Eingabemaske
 
 
-## Beispiel-Ausgaben
+
+## Screenshots
+
+![Frontend](./assets/img/ud-datetime-block_02.jpg)
+*Frontend-Ansicht.*
+
+![Editor UI](./assets/img/editor.png)
+*Editor-Ansicht.*
+
+
+
+## Beispiele und Ausgaben
 
 | Eingabe            | Ausgabe                     |
 | ------------------ | --------------------------- |
@@ -34,51 +41,8 @@ Ein Gutenberg-Block zur einfachen Verwaltung von **Start- und Endzeitpunkten** i
 | Individueller Text | `Freitagmorgen`             |
 
 
-## Screenshots
 
-![Frontend](./assets/img/ud-datetime-block_02.jpg)
-*Abbildung: Frontend-Ansicht.*
-
-![Editor UI](./assets/img/editor.png)
-*Abbildung: Editor-Ansicht.*
-
-
-## Verzeichnisstruktur
-
-<pre>
-ud-datetime-block/
-
-├── package.json              → NPM-Konfiguration: Build-Kommandos, Abhängigkeiten
-├── webpack.config.js         → Custom Webpack-Konfiguration (mit Styles und Scripts)
-├── block.json                → Block-Metadaten, Attribute, Script- und Stylepfade
-├── ud-datetime-block.php     → Einstiegspunkt, lädt alle includes/*
-
-├── includes/                 
-│   ├── block-register.php    → Registriert den Block mit register_block_type
-│   ├── meta-fields.php       → Registriert Meta-Felder für Start/Ende
-│   ├── save-handler.php      → Extrahiert Blockdaten bei Save und speichert in Post-Meta
-│   ├── admin-columns.php     → Zusätzliche Spalte in Admin-Übersicht mit Start/Enddatum
-│   ├── sort-order.php        → Macht Spalte sortierbar (Startdatum)
-│   ├── helpers.php           → Rekursive Blockprüfung und Datums-Extraktion
-
-├── src/
-│   ├── css/
-│   │   ├── editor.scss       → Styling für Editor
-│   │   ├── frontend.scss     → Styling für Frontend (optional)
-│   ├── js/
-│   │   ├── editor.js         → Einstiegspunkt, lädt Edit/Save-Logik
-│   │   ├── edit.js           → Steuert die Block-Oberfläche im Editor
-│   │   ├── save.js           → Rendert das gespeicherte HTML mit data-Attributen
-│   │   ├── utils/
-│   │   │   └── formatDateRange.js → Hilfsfunktion für deutschsprachige Zeitraumanzeige
-
-├── build/                    → Ausgabeordner für kompiliertes CSS/JS
-</pre>
-
-
-## HTML-Ausgabe im Frontend
-
-Der Block gibt folgenden HTML-Code aus:
+### HTML-Ausgabe im Frontend
 
 ```html
 <div class="wp-block-ud-datetime-block" data-start="2025-05-22T00:00:00" data-end="2025-05-23T00:00:00">
@@ -86,6 +50,19 @@ Der Block gibt folgenden HTML-Code aus:
 </div>
 ```
 
+
+- Die Attribute `data-start` und `data-end` enthalten vollständige ISO-Zeitstempel (z. B. 2025-05-22T00:00:00) und können für Sortierung, Filter oder JavaScript genutzt werden.
+- Für Template-Abfragen kann das Meta-Feld `ud_datetime_block_start` wie folgt verwendet werden:
+```
+    'meta_query'     => [
+        [
+            'key'     => 'ud_datetime_block_start',
+            'value'   => date('Y-m-d H:i:s'),
+            'compare' => '>=',
+            'type'    => 'DATETIME',
+        ],
+    ]
+```
 
 ### Erläuterung:
 
@@ -106,13 +83,7 @@ Wenn du Beiträge nach dem im Block definierten Startdatum (`ud_datetime_block_s
 
 ### Abfrage ab heutigem Datum (z. B. für Veranstaltungen)
 
-```php
-$args = [
-    'post_type'      => ['post', 'veranstaltung', 'custom_type'],
-    'posts_per_page' => 10,
-    'meta_key'       => 'ud_datetime_block_start',
-    'orderby'        => 'meta_value',
-    'order'          => 'ASC',
+```
     'meta_query'     => [
         [
             'key'     => 'ud_datetime_block_start',
@@ -120,17 +91,20 @@ $args = [
             'compare' => '>=',
             'type'    => 'DATETIME',
         ],
-    ],
-];
-
-$query = new WP_Query($args);
+    ]
 ```
 
 > Ergebnis: Alle Inhalte mit einem zukünftigen Startdatum – sortiert nach dem frühesten Datum.
 
 
-## Installation
 
-1. Plugin in den Ordner `wp-content/plugins/` legen
-2. Per Backend aktivieren
-3. Im Gutenberg-Editor den Block **„Datum-Zeit Block“** einfügen
+## Autor
+
+[ulrich.digital gmbh](https://ulrich.digital)
+
+
+## Lizenz
+
+GPL v2 or later
+[https://www.gnu.org/licenses/gpl-2.0.html](https://www.gnu.org/licenses/gpl-2.0.html)
+
