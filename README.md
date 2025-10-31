@@ -32,6 +32,8 @@ Speichert alle Werte als Meta-Felder und bettet Start-/Enddaten zusätzlich als 
 
 ## Beispiele und Ausgaben
 
+- Beispielhafte Eingaben und resultierende Ausgaben:
+
 | Eingabe            | Ausgabe                     |
 | ------------------ | --------------------------- |
 | Nur Startdatum     | `10. Mai 2025`              |
@@ -42,7 +44,7 @@ Speichert alle Werte als Meta-Felder und bettet Start-/Enddaten zusätzlich als 
 
 
 
-### HTML-Ausgabe im Frontend
+- HTML-Ausgabe im Frontend
 
 ```html
 <div class="wp-block-ud-datetime-block" data-start="2025-05-22T00:00:00" data-end="2025-05-23T00:00:00">
@@ -50,19 +52,17 @@ Speichert alle Werte als Meta-Felder und bettet Start-/Enddaten zusätzlich als 
 </div>
 ```
 
-
 - Die Attribute `data-start` und `data-end` enthalten vollständige ISO-Zeitstempel (z. B. 2025-05-22T00:00:00) und können für Sortierung, Filter oder JavaScript genutzt werden.
+
 - Für Template-Abfragen kann das Meta-Feld `ud_datetime_block_start` wie folgt verwendet werden:
-```
-    'meta_query'     => [
-        [
-            'key'     => 'ud_datetime_block_start',
-            'value'   => date('Y-m-d H:i:s'),
-            'compare' => '>=',
-            'type'    => 'DATETIME',
-        ],
-    ]
-```
+```'meta_query'     => [
+    [
+        'key'     => 'ud_datetime_block_start',
+        'value'   => date('Y-m-d H:i:s'),
+        'compare' => '>=',
+        'type'    => 'DATETIME',
+    ],
+]```
 
 ### Erläuterung:
 
