@@ -2,21 +2,11 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./block.json":
-/*!********************!*\
-  !*** ./block.json ***!
-  \********************/
-/***/ ((module) => {
-
-module.exports = /*#__PURE__*/JSON.parse('{"apiVersion":2,"name":"ud/datetime-block","title":"Datum-Zeit Block","category":"widgets","icon":"calendar","description":"Block mit Start-/Endzeit und optionalem Anzeige-Label.","editorScript":"file:./build/editor-script.js","style":"file:./build/frontend-style.css","editorStyle":"file:./build/editor-style.css","attributes":{"startDate":{"type":"string"},"startTime":{"type":"string"},"endDate":{"type":"string"},"endTime":{"type":"string"},"customLabel":{"type":"string"},"showOptions":{"type":"boolean","default":false},"start":{"type":"string","source":"attribute","attribute":"data-start","selector":".wp-block-ud-datetime-block"},"end":{"type":"string","source":"attribute","attribute":"data-end","selector":".wp-block-ud-datetime-block"}},"supports":{"html":false}}');
-
-/***/ }),
-
-/***/ "./src/js/edit.js":
+/***/ "./src/js/edit.js"
 /*!************************!*\
   !*** ./src/js/edit.js ***!
   \************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -154,13 +144,13 @@ function Edit({
   });
 }
 
-/***/ }),
+/***/ },
 
-/***/ "./src/js/save.js":
+/***/ "./src/js/save.js"
 /*!************************!*\
   !*** ./src/js/save.js ***!
   \************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -200,13 +190,13 @@ function save({
   });
 }
 
-/***/ }),
+/***/ },
 
-/***/ "./src/js/utils/formatDateRange.js":
+/***/ "./src/js/utils/formatDateRange.js"
 /*!*****************************************!*\
   !*** ./src/js/utils/formatDateRange.js ***!
   \*****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -281,47 +271,57 @@ function formatDateRange(startDate, startTime, endDate, endTime) {
   return `${sDate.toLocaleDateString('de-DE', options)}${timePart}`;
 }
 
-/***/ }),
+/***/ },
 
-/***/ "@wordpress/block-editor":
-/*!*************************************!*\
-  !*** external ["wp","blockEditor"] ***!
-  \*************************************/
-/***/ ((module) => {
-
-module.exports = window["wp"]["blockEditor"];
-
-/***/ }),
-
-/***/ "@wordpress/components":
-/*!************************************!*\
-  !*** external ["wp","components"] ***!
-  \************************************/
-/***/ ((module) => {
-
-module.exports = window["wp"]["components"];
-
-/***/ }),
-
-/***/ "@wordpress/i18n":
-/*!******************************!*\
-  !*** external ["wp","i18n"] ***!
-  \******************************/
-/***/ ((module) => {
-
-module.exports = window["wp"]["i18n"];
-
-/***/ }),
-
-/***/ "react/jsx-runtime":
+/***/ "react/jsx-runtime"
 /*!**********************************!*\
   !*** external "ReactJSXRuntime" ***!
   \**********************************/
-/***/ ((module) => {
+(module) {
 
 module.exports = window["ReactJSXRuntime"];
 
-/***/ })
+/***/ },
+
+/***/ "@wordpress/block-editor"
+/*!*************************************!*\
+  !*** external ["wp","blockEditor"] ***!
+  \*************************************/
+(module) {
+
+module.exports = window["wp"]["blockEditor"];
+
+/***/ },
+
+/***/ "@wordpress/components"
+/*!************************************!*\
+  !*** external ["wp","components"] ***!
+  \************************************/
+(module) {
+
+module.exports = window["wp"]["components"];
+
+/***/ },
+
+/***/ "@wordpress/i18n"
+/*!******************************!*\
+  !*** external ["wp","i18n"] ***!
+  \******************************/
+(module) {
+
+module.exports = window["wp"]["i18n"];
+
+/***/ },
+
+/***/ "./block.json"
+/*!********************!*\
+  !*** ./block.json ***!
+  \********************/
+(module) {
+
+module.exports = /*#__PURE__*/JSON.parse('{"apiVersion":2,"name":"ud/datetime-block","title":"Datum-Zeit Block","category":"widgets","icon":"calendar","description":"Block mit Start-/Endzeit und optionalem Anzeige-Label.","editorScript":"file:./build/editor-script.js","style":"file:./build/frontend-style.css","editorStyle":"file:./build/editor-style.css","attributes":{"startDate":{"type":"string"},"startTime":{"type":"string"},"endDate":{"type":"string"},"endTime":{"type":"string"},"customLabel":{"type":"string"},"showOptions":{"type":"boolean","default":false},"start":{"type":"string","source":"attribute","attribute":"data-start","selector":".wp-block-ud-datetime-block"},"end":{"type":"string","source":"attribute","attribute":"data-end","selector":".wp-block-ud-datetime-block"}},"supports":{"html":false}}');
+
+/***/ }
 
 /******/ 	});
 /************************************************************************/
@@ -343,6 +343,12 @@ module.exports = window["ReactJSXRuntime"];
 /******/ 		};
 /******/ 	
 /******/ 		// Execute the module function
+/******/ 		if (!(moduleId in __webpack_modules__)) {
+/******/ 			delete __webpack_module_cache__[moduleId];
+/******/ 			var e = new Error("Cannot find module '" + moduleId + "'");
+/******/ 			e.code = 'MODULE_NOT_FOUND';
+/******/ 			throw e;
+/******/ 		}
 /******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
 /******/ 	
 /******/ 		// Return the exports of the module
